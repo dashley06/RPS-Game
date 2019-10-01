@@ -1,0 +1,12 @@
+#title,
+#results,
+#instructions, 
+#gameDisplay {
+    text-align: center;
+    border-block: border-box;
+    border: solid purple 3px;
+    color: rgb(192, 99, 192);
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
