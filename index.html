@@ -10,16 +10,17 @@
 <body>
 
   <div id= "title"> 
-    <h1> ROCK PAPER SCISSORS</h1>
+        <h1> ROCK PAPER SCISSORS</h1>
   </div>
 
   <div id= "instructions">
-    <h3>Choose a Letter: "R" for ROCK, "P" for PAPER, "S" for SCISSORS </h3> 
+        <h3>Choose a Letter: "R" for ROCK, "P" for PAPER, "S" for SCISSORS </h3> 
   </div>
 
   <div id= "gameDisplay">
         <h4> User Guessed: <span id="userKey"></span></h4>
         <h4> Computer Guessed: <span id="compKey"></span></h4>
+        <h3 id="message"></h3>
   </div>
 
   <div id="results">
@@ -28,72 +29,8 @@
         <h4> Ties: <span id= "tie"></span></h4>
   </div>
 
-
-
-<script type="text/javascript">
-
-
-var computerChoices = ["R", "P", "S"];
-var tie = 0;
-var userWins = 0;
-var userLoss = 0;
-var computerGuess;
-var userGuess;
-
-document.onkeyup = function(event) {
-  computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-    console.log("computer guess", computerGuess);
-  userGuess= event.key.toUpperCase();
-    console.log("key pressed", userGuess);
-    gameLogic();
-}
-
-
-function gameLogic(){
-
-  if (userGuess === computerGuess){
-      tie++;
-      console.log(tie);
-  } else if (userGuess === "R" && computerGuess === "S"){
-      userWins++;
-      console.log(userWins);
-  } else if (userGuess === "R" && computerGuess === "P"){
-      userLoss++;
-      console.log(userLoss);
-  } else if (userGuess === "S" && computerGuess === "P"){
-      userWins++;
-      console.log(userWins);
-  } else if(userGuess === "S" && computerGuess === "R"){
-      userLoss++;
-      console.log(userLoss);
-  } else if (userGuess === "P" && computerGuess === "S"){
-      userLoss++;
-      console.log(userLoss);
-  } else if (userGuess === "P" && computerGuess === "R"){
-      userWins++;
-      console.log(userWins);
-  } else {
-    alert ("Invalid Guess. You have to pick either R, P, or S")
-  }
-
-document.getElementById("totalWins").innerHTML = userWins;
-document.getElementById("compWins").innerHTML = userLoss;
-document.getElementById("tie").innerHTML = tie;
-document.getElementById("userKey").innerHTML = userGuess;
-document.getElementById("compKey").innerHTML = computerGuess;
-     
-}
-
-function restartGame(){
-    document.getElementById("userKey").innerHTML = "";
-    document.getElementById("compKey").innerHTML = "";
-     
-}
-
-restartGame();
-        
-</script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 
 </body>
-
 </html>
