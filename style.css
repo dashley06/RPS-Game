@@ -1,19 +1,44 @@
-#title,
-#results,
-#instructions, 
-#gameDisplay {
+.card-header{
     text-align: center;
-    border-block: border-box;
-    border: solid purple 3px;
-    color: rgb(192, 99, 192);
-    margin-bottom: 15px;
+    color: rgb(126, 23, 126);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.card-text {
+    text-align: center;
+    color: rgb(129, 41, 129);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px,
+}
+.card-title {
+    text-align: center;
+    color: rgb(192, 99, 192);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px,
+}
+
+.gameDisplay{
+    margin:25px;
 }
 
 #message {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    color: orangered;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(255, 0, 157);
+ 
+}
+.show{
+    border-block: border-box;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
 }

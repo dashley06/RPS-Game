@@ -4,31 +4,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id= "title"> 
-        <h1> ROCK PAPER SCISSORS</h1>
+<div class="card">
+    <h5 class="card-header">ROCK PAPER SCISSORS</h5>
+        <div class="card-body">
+            <p class="card-text">Choose a Letter: "R" for ROCK, "P" for PAPER, "S" for SCISSORS</p>
+                  
+        </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card gameDisplay">
+        <div class="card-body">
+          <h5 class="card-title">User Guessed:</h5>
+          <p class="card-text"><span id="userKey"></span></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card gameDisplay">
+        <div class="card-body">
+          <h5 class="card-title">Computer Guessed:</h5>
+          <p class="card-text"><span id="compKey"></span></p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id= "instructions">
-        <h3>Choose a Letter: "R" for ROCK, "P" for PAPER, "S" for SCISSORS </h3> 
+  <div class="row">
+      <div class="col-sm-12 show"><span id="message"></span></div>
+  </div>
+  <div class="card">
+    <div class="card-header">Game Results</div>
+    <div class="card-body" id="results">
+      <p class="card-text">
+        User Total Wins: <span id= "totalWins"></span>
+        <br>
+        Computer Total Wins: <span id= "compWins"></span>
+        <br>
+        Ties: <span id= "tie"></span> </p>
+     
+    </div>
   </div>
 
-  <div id= "gameDisplay">
-        <h4> User Guessed: <span id="userKey"></span></h4>
-        <h4> Computer Guessed: <span id="compKey"></span></h4>
-        <h3 id="message"></h3>
-  </div>
-
-  <div id="results">
-        <h4> User Total Wins: <span id= "totalWins"></span></h4>
-        <h4> Computer Total Wins: <span id= "compWins"></span></h4>
-        <h4> Ties: <span id= "tie"></span></h4>
-  </div>
-
+  
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
 

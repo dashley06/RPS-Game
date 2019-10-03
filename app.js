@@ -49,7 +49,10 @@ function gameLogic(){
       message.innerHTML = "GOOD GUESS!!! THAT'S A WIN!"
   } else {
     alert ("Invalid Guess. You have to pick either R, P, or S")
-  }
+    userGuess=" ";
+    computerGuess= " ";
+    restartGame();
+}
 
 document.getElementById("totalWins").innerHTML = userWins;
 document.getElementById("compWins").innerHTML = userLoss;
@@ -61,18 +64,15 @@ timedText();
 }
 
 function restartGame(){
-    document.getElementById("userKey").innerHTML = "";
-    document.getElementById("compKey").innerHTML = "";
+    document.getElementById("userKey").innerHTML = "_";
+    document.getElementById("compKey").innerHTML = "_";
      
 }
 
 
 function timedText() {
     setTimeout(function(){ 
-        $("#message").empty(); }, 2000);
-    restartGame(); 
+        $("#message").empty(); }, 2000);   
     }
-
-   
-
+restartGame(); 
 });
